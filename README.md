@@ -21,6 +21,10 @@
 [Validator deployment]()  
 
 
+### Relayer deployment
+[Hermes installation/configuration]()  
+
+
 ### Services
 [Publishing RPC/API endpoints]()  
 [Statesync configuration]()
