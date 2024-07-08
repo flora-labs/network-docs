@@ -1,22 +1,16 @@
-## Ubuntu
+### Prerequisites
+
+* Ubuntu 20.04 LTS or newer
+* Go 1.18.x or newer - Installation guide [here](../../home/installation-guides/install-golang.md).
+* JSON processor jq - `sudo apt install jq`
+* Essential Build Tools - `sudo apt install build-essential`
+
+
+## Ubuntu Build
 ```
-# Base
-sudo apt-get install make gcc
-
-# Golang
-wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
-export PATH=$PATH:/usr/local/go/bin
-
+git clone repo ....
 ```
  
-## MacOS
+## macOS
 ```
-# Base
-brew install make
-brew install gcc
-
-# Golang
-brew install go
-```
+Build on macOS will be also included...
