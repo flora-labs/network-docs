@@ -24,7 +24,7 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GOVER}.linux-arm64.ta
 
 **Install previous version**
 
-```json
+```bash
 GOVER=go1.20.3
 wget https://golang.org/dl/${GOVER}.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GOVER}.linux-amd64.tar.gz
