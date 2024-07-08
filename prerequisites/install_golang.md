@@ -1,5 +1,6 @@
 # Install Golang
 
+## Ubuntu 22.02 and later
 
 ### Download and extract repository
 
@@ -47,6 +48,18 @@ fi
 ```
 
 **NOTE:** To make sure that Go-specific environment will be added to new users profiles below code needs to be added to `/etc/skel/.profile`. If existing users should use golang variables have to be added to their profiles.
+
+
+## macOS
+
+```bash
+# Base
+brew install make
+brew install gcc
+
+# Golang
+brew install go
+```
 
 ### Important
 
