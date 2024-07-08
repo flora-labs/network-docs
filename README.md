@@ -9,10 +9,12 @@
 
 
 ## Node deployment
-[03. Node installation](node_deployment/node_install.md)
-[04. Configuration details]()
-[05. Validator deployment]()
+[03. Node installation](node_deployment/node_install.md)  
+[04. Configuration details]()  
+[05. Node synchronization]()  
+[06. Validator deployment]()  
 
 
 ## Services
 [Publishing RPC/API endpoints]()
+[Statesync configuration]()
