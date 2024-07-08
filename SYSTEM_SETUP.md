@@ -1,7 +1,7 @@
 # System Configuration
 
 ## Prerequisites
-[01. Golang install](install_golang.md)
+[01. Golang install](install_golang.md)  
 [02. Cosmovisor install](install_cosmovisor.md)
 
 ## Ubuntu
