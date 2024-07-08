@@ -2,9 +2,9 @@
 
 
 ## Reference
-[Active chains](references/active_networks.md)
-[Software versions]()
-[Command Line Interface - CLI]()
+[Active chains](references/active_networks.md)  
+[Software versions]()  
+[Command Line Interface - CLI]()  
 
 
 ## Guides
