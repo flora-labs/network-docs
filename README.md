@@ -1,2 +1,32 @@
 # network-docs
-Information on how to prepare your system to run a node, join testnet etc.
+
+
+## Reference
+[Active chains](references/active_networks.md)  
+[Software versions]()  
+[Command Line Interface - CLI]()  
+
+
+## Guides
+
+### Prerequisites
+[Golang installation](prerequisites/install_golang.md)  
+[Cosmovisor installation](prerequisites/install_cosmovisor.md)
+
+
+### Node deployment
+[Node installation](node_deployment/node_install.md)  
+[Configuration details]()  
+[Node synchronization]()  
+[Validator deployment]()  
+
+
+### Relayer deployment
+[Hermes installation/configuration]()  
+
+
+### Services
+[Publishing RPC/API endpoints]()  
+[Statesync configuration]()
+
+
