@@ -22,7 +22,7 @@
 
 
 ### Relayer deployment
-[Hermes installation](relayer_installation/hermes_installation.md)  
+[Hermes installation](relayer_deployment/hermes_installation.md)  
 [Hermes configuration]()  
 
 
