@@ -18,7 +18,7 @@
 [Node installation](node_deployment/node_install.md)  
 [Configuration details]()  
 [Node synchronization](node_deployment/node_synchronization.md)  
-[Validator deployment]()  
+[Validator deployment](node_deployment/validator_deployment.md)  
 
 
 ### Relayer deployment
