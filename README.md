@@ -3,7 +3,7 @@
 
 ## Reference
 [Active chains](references/active_networks.md)  
-[Software versions]()  
+[Software versions](references/software_versions.md)  
 [Command Line Interface - CLI]()  
 
 
