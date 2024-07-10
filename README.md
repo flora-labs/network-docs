@@ -17,7 +17,7 @@
 ### Node deployment
 [Node installation](node_deployment/node_install.md)  
 [Configuration details]()  
-[Node synchronization]()  
+[Node synchronization](node_deployment/node_synchronization.md)  
 [Validator deployment]()  
 
 
