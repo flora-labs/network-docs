@@ -3,8 +3,8 @@
 
 ## Reference
 [Active chains](references/active_networks.md)  
-[Software versions]()  
-[Command Line Interface - CLI]()  
+[Software versions](references/software_versions.md)  
+[Command Line Interface - CLI](references/command_line_interface.md)  
 
 
 ## Guides
@@ -17,12 +17,13 @@
 ### Node deployment
 [Node installation](node_deployment/node_install.md)  
 [Configuration details]()  
-[Node synchronization]()  
-[Validator deployment]()  
+[Node synchronization](node_deployment/node_synchronization.md)  
+[Validator deployment](node_deployment/validator_deployment.md)  
 
 
 ### Relayer deployment
-[Hermes installation/configuration]()  
+[Hermes installation](relayer_deployment/hermes_installation.md)  
+[Hermes configuration]()  
 
 
 ### Services
