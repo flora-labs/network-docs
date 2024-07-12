@@ -28,3 +28,4 @@
 [Active chains](references/active_networks.md)  
 [Software versions](references/software_versions.md)  
 [Command Line Interface - CLI](references/command_line_interface.md)  
+[Gentx submittion](references/gentx_submission.md)
