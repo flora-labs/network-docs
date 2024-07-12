@@ -5,7 +5,7 @@
 Before proceeding with the installation of the Cosmos node, ensure that the following prerequisites are met:
 
 - **Operating System**: Ubuntu 22.04 LTS or newer.
-- **Golang**: Version 1.22.x or newer. Refer to the detailed installation guide [here](../../home/installation-guides/install-golang.md).
+- **Golang**: Version 1.22.x or newer. Refer to the detailed installation guide [here](../prerequisites/install_golang.md).
 - **JSON Processor (jq)**: Required for parsing JSON outputs.
   ```bash
   sudo apt install jq
