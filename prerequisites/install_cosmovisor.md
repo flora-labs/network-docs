@@ -2,7 +2,7 @@
 
 Cosmovisor is a process manager for Cosmos SDK applications that simplifies the upgrade process. It monitors the blockchain's governance proposal system for pending upgrades, automatically downloads binaries, and can perform automatic restarts.
 
-##### Build Cosmovisor
+## Build Cosmovisor
 
 1. **Clone the repository and navigate to the Cosmovisor directory**:
    ```bash
@@ -26,7 +26,7 @@ Cosmovisor is a process manager for Cosmos SDK applications that simplifies the 
 
    Copying the Cosmovisor binary to `/usr/local/bin` makes it accessible system-wide, allowing any user to run it.
 
-#### Setup for Multi-Node Configurations
+## Setup for Multi-Node Configurations
 
 For setups involving multiple nodes, special directory structures are required:
 
@@ -53,7 +53,7 @@ For setups involving multiple nodes, special directory structures are required:
 
    Checking the directory ensures that the installation was successful. Moving the blockchain's binary into the Cosmovisor structure is crucial for upgrades and maintenance.
 
-### Service File Template
+## Service File Template
 
 A service file template helps in automating the node's operations using `systemd`, a system and service manager in Unix-like operating systems.
 
@@ -84,7 +84,7 @@ WantedBy=multi-user.target
 - **Service Settings**: Defines user, group, startup command, restart conditions, and environmental variables that configure how Cosmovisor runs the node.
 - **Installation**: Specifies the target type, ensuring the service is integrated into the system's multi-user environment.
 
-### Managing the Service
+## Managing the Service
 
 These commands control and monitor the node service:
 
