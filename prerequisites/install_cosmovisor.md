@@ -1,5 +1,4 @@
 # Install Cosmovisor
-You already have a solid foundation for the Cosmovisor installation documentation, including basic installation instructions and setup for multi-node environments. To enhance this documentation, you could add more detailed explanations, common troubleshooting tips, and a bit more on the rationale behind each step. Here’s how you might expand and improve the existing sections:
 
 Cosmovisor is a process manager for Cosmos SDK applications that simplifies the upgrade process. It monitors the blockchain's governance proposal system for pending upgrades, automatically downloads binaries, and can perform automatic restarts.
 
