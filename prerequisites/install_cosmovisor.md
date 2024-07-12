@@ -26,32 +26,6 @@ Cosmovisor is a process manager for Cosmos SDK applications that simplifies the 
 
    Copying the Cosmovisor binary to `/usr/local/bin` makes it accessible system-wide, allowing any user to run it.
 
-## Setup for Multi-Node Configurations
-
-For setups involving multiple nodes, special directory structures are required:
-
-1. **Create directory structure for each node**:
-   ```bash
-   mkdir -p ${HOME}/.chain-folder(.juno)/cosmovisor/genesis/bin
-   ```
-
-   This directory will hold the initial binaries for the blockchain, setting up a clean environment for each node's genesis state.
-
-2. **Install Cosmovisor in a local directory**:
-   ```bash
-   mkdir -p ${HOME}/.local/bin
-   cp cosmovisor ${HOME}/.local/bin
-   ```
-
-   Installing Cosmovisor in the local user's bin directory allows for user-specific process management.
-
-3. **Validate installation and set up the binary**:
-   ```bash
-   ls ${HOME}/.local/bin
-   cp ${HOME}/go/bin/binary ${HOME}/.chain/cosmovisor/genesis/bin
-   ```
-
-   Checking the directory ensures that the installation was successful. Moving the blockchain's binary into the Cosmovisor structure is crucial for upgrades and maintenance.
 
 ## Service File Template
 
