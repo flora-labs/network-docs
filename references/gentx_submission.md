@@ -7,7 +7,7 @@ The `gentx` (genesis transaction) is a special transaction used to register a va
 ## Prerequisites
 
 Before proceeding, ensure you have:
-- Successfully installed and set up your Cosmos node (`gaiad`). See the node installation guide [here](../../node-installation.md).
+- Successfully installed and set up your Cosmos node (`gaiad`). See the node installation guide [here](../node_deployment/node_instsll.md).
 
 
 ## Steps to Generate and Submit a Gentx
