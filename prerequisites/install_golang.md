@@ -52,17 +52,4 @@ fi
 
 ## macOS
 
-```bash
-# Base
-brew install make
-brew install gcc
-
-# Golang
-brew install go
-```
-
-### Important
-
-Once all changes are applied and files installed make sure all shell instances will be closed and then logoff and logon again to system.
-
-That way all environmental variables will be set correctly.
+# TODO
