@@ -1,55 +1,57 @@
 # Install Golang
 
+The installation process varies based on the operating system. For development environments, installing Golang locally in the user's home directory allows developers to manage upgrades independently from the system's default packages and other users.
+
 ## Ubuntu 22.02 and later
 
-### Download and extract repository
+### Download and Extract Golang
+
+Instead of installing Golang system-wide, we recommend installing it in the user's home directory to allow developers to manage different Go versions based on project needs.
 
 
-#### AMD and Intel compatible processors
+**For AMD and Intel compatible processors:**
 
 ```bash
 GOVER=$(curl https://go.dev/VERSION?m=text | head -n 1)
-wget https://golang.org/dl/${GOVER}.linux-amd64.tar.gz && \
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GOVER}.linux-amd64.tar.gz
+wget https://golang.org/dl/${GOVER}.linux-amd64.tar.gz
+mkdir -p ${HOME}/go/${GOVER}
+tar -C ${HOME}/go/${GOVER} -xzf ${GOVER}.linux-amd64.tar.gz
 ```
 
-#### **ARM processors**
+**For ARM processors:**
 
 ```bash
 GOVER=$(curl https://go.dev/VERSION?m=text | head -n 1)
 wget https://golang.org/dl/${GOVER}.linux-arm64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GOVER}.linux-arm64.tar.gz
+mkdir -p ${HOME}/go/${GOVER}
+tar -C ${HOME}/go/${GOVER} -xzf ${GOVER}.linux-arm64.tar.gz
 ```
 
-**NOTE**: That will install latest version of Go
+**NOTE:** This approach ensures that the latest version of Go is installed locally for the user.
 
-**Install previous version**
-
+**Install a specific previous version (example uses go1.20.3):**
 ```bash
 GOVER=go1.20.3
 wget https://golang.org/dl/${GOVER}.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GOVER}.linux-amd64.tar.gz
+mkdir -p ${HOME}/go/${GOVER}
+tar -C ${HOME}/go/${GOVER} -xzf ${GOVER}.linux-amd64.tar.gz
 ```
 
-### Add Go environmental variables
+**Configure Environment Variables**
 
-Set of variables, which should be set for user(s) with need to build Go apps.
-
-That can be placed in `${HOME}/.profile` or `${HOME}/.bashrc` or any other shell-specific file, whic sets variable during logon
+To ensure Go works correctly with your shell, append the following to your ${HOME}/.profile, ${HOME}/.bashrc, or appropriate configuration file:
 
 ```bash
-# add environmental variables for Go
-if [ -f "/usr/local/go/bin/go" ] ; then
-    export GOROOT=/usr/local/go
-    export GOPATH=${HOME}/go
-    export GOBIN=${GOPATH}/bin
-    export PATH=${PATH}:${GOROOT}/bin:${GOBIN}
-fi
+# Set the Go environment variables dynamically based on installed version
+GOVER=$(ls ${HOME}/go | tail -n 1)  # This assumes you have at least one version installed
+GOROOT=${HOME}/go/${GOVER}
+GOPATH=${HOME}/go
+GOBIN=${GOPATH}/bin
+
+export GOROOT GOPATH GOBIN
+export PATH=${PATH}:${GOROOT}/bin:${GOBIN}
 ```
 
-**NOTE:** To make sure that Go-specific environment will be added to new users profiles below code needs to be added to `/etc/skel/.profile`. If existing users should use golang variables have to be added to their profiles.
+**NOTE:** To ensure the environment variables are set up correctly for new terminal sessions, users should log off and log on again after setup.
 
 
-## macOS
-
-# TODO
