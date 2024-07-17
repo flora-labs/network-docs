@@ -55,25 +55,3 @@ export PATH=${PATH}:${GOROOT}/bin:${GOBIN}
 **NOTE:** To ensure the environment variables are set up correctly for new terminal sessions, users should log off and log on again after setup.
 
 
-## macOS
-
-**Base Installation:**
-
-```bash
-# Base
-brew install make
-brew install gcc
-```
-
-**Golang Installation:**
-
-```bash
-brew install go
-```
-
-For macOS, system-wide installation using Homebrew remains a practical choice due to the ease of managing packages and dependencies. However, for version-specific projects, consider using tools like asdf or gvm (Go Version Manager) to manage multiple active Go versions.
-
-
-### Important
-
-After installation and configuration, ensure all shell instances are closed, and perform a logoff and logon sequence. This refresh will apply all new environment variables correctly across your sessions.
