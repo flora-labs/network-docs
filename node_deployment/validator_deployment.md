@@ -14,14 +14,14 @@ Information about Keybase and how to create profile for validator, so it can pre
 ## Turning node into validator
 
 ```bash
-daemond tx staking create-validator \
+florad tx staking create-validator \
   --chain-id="CHAIN_NAME" \
   --commission-rate=0.05 \
   --commission-max-rate=0.3 \
   --commission-max-change-rate=0.1 \
   --min-self-delegation="1" \
   --amount=1000000utoken  \
-  --pubkey $(daemond tendermint show-validator) \
+  --pubkey $(florad tendermint show-validator) \
   --website "https://validator.website.url"   \
   --identity KEYBASE_IDENTITY   \
   --details "Short bio"   \

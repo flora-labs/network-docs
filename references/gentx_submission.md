@@ -7,7 +7,7 @@ The `gentx` (genesis transaction) is a special transaction used to register a va
 ## Prerequisites
 
 Before proceeding, ensure you have:
-- Successfully installed and set up your Cosmos node (`gaiad`). See the node installation guide [here](../node_deployment/node_instsll.md).
+- Successfully installed and set up your Flora node (`florad`). See the node installation guide [here](../node_deployment/node_instsll.md).
 
 
 ## Steps to Generate and Submit a Gentx
@@ -17,7 +17,7 @@ Before proceeding, ensure you have:
 If not already initialized, set up your node with a unique moniker and chain ID:
 
 ```bash
-gaiad init myvalidator --chain-id <testnet_chain_id>
+florad init <VALIDATOR_MONIKER> --chain-id <CHAIN_ID>
 ```
 
 ### 2. Set Up Your Node
@@ -25,9 +25,9 @@ gaiad init myvalidator --chain-id <testnet_chain_id>
 Create a new key or use an existing one for your validator:
 
 ```bash
-gaiad keys add myvalidator
+florad keys add <KEY_NAME>
 # or in case you want to use mnemonic you already have
-gaiad keys add myvalidator --recover
+florad keys add <KEY_NAME> --recover
 ```
 
 Make a note of the address and mnemonic. **Keep your mnemonic safe**; it is your backup!
@@ -38,7 +38,7 @@ Make a note of the address and mnemonic. **Keep your mnemonic safe**; it is your
 Adjust the genesis configuration as necessary. For testnets, you might need to modify parameters like staking denominations:
 
 ```bash
-gaiad add-genesis-account $(gaiad keys show myvalidator -a) 1000000uatom
+florad add-genesis-account $(florad keys show <KEY_NAME> -a) 10000000uflrd
 ```
 
 ### 4. Create the Gentx
@@ -46,21 +46,21 @@ gaiad add-genesis-account $(gaiad keys show myvalidator -a) 1000000uatom
 Generate the `gentx` for your validator. Specify the amount to stake and the commission details:
 
 ```bash
-gaiad gentx myvalidator 1000000uatom --chain-id <testnet_chain_id> \
+florad gentx <VALIDATOR_MONIKER> 1000000uflrd --chain-id <CHAIN_ID> \
   --commission-rate="0.10" --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" --min-self-delegation="1" \
-  --pubkey $(gaiad tendermint show-validator)
+  --pubkey $(florad tendermint show-validator)
 ```
 
 This command creates a genesis transaction (`gentx`) for your validator with the specified staking, commission rates, and tendermint public key.
 
 ### 5. Submit Your Gentx
 
-After generating your `gentx`, it will be located in `~/.gaia/config/gentx/`. For most testnets, you will need to submit this file to the designated repository or through a form provided by the testnet coordinators.
+After generating your `gentx`, it will be located in `~/.flora/config/gentx/`. For most testnets, you will need to submit this file to the designated repository or through a form provided by the testnet coordinators.
 
 ```bash
 # Example submission command
-cp ~/.gaia/config/gentx/gentx-<identifier>.json <path-to-testnet-gentx-submission>
+cp ~/.flora/config/gentx/gentx-<identifier>.json <path-to-testnet-gentx-submission>
 ```
 
 Follow the specific instructions provided by the testnet organizers on how to submit the `gentx`.

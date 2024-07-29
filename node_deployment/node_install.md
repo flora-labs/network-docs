@@ -22,9 +22,9 @@ Before proceeding with the installation of the Cosmos node, ensure that the foll
 For security reasons, it is recommended to run blockchain nodes as a non-root user:
 
 ```bash
-sudo adduser gaiauser
-sudo usermod -aG sudo gaiauser  # Only if admin privileges are needed
-su - gaiauser
+sudo adduser flora
+sudo usermod -aG sudo flora  # Only if admin privileges are needed
+su - flora
 ```
 
 ##### 2. Clone the Repository
@@ -33,8 +33,8 @@ As the gaiauser, clone the Gaia repository into your home directory:
 
 ```bash
 cd ~
-git clone https://github.com/cosmos/gaia.git
-cd gaia
+git clone https://github.com/flora-labs/flora
+cd flora
 ```
 
 ##### 3. Build from Source
@@ -45,25 +45,25 @@ Compile the source code to build the Gaia daemon (gaiad):
 make install
 ```
 
-This command will build the `gaiad` binary and install it in `~/go/bin`.
+This command will build the `florad` binary and install it in `~/go/bin`.
 
 ##### 4. Initialize the Node
 
 Set up your node:
 
 ```bash
-gaiad init <MYNODE> --chain-id cosmoshub-4
+florad init <MYNODE> --chain-id <CHAIN_ID>
 ```
 
-Replace `<MYNODE>` with your desired node name. This step configures your node and creates necessary configuration files in `~/.gaia`.
+Replace `<MYNODE>` with your desired node name. This step configures your node and creates necessary configuration files in `~/.flora`.
 
 ##### 5. Configure the Node
 
 Edit the configuration files to tune parameters such as the minimum gas prices and other network settings:
 
 ```bash
-nano ~/.gaia/config/config.toml
-nano ~/.gaia/config/app.toml
+nano ~/.flora/config/config.toml
+nano ~/.flora/config/app.toml
 ```
 
 ##### 6. Add Genesis File
@@ -71,7 +71,7 @@ nano ~/.gaia/config/app.toml
 Download and place the genesis file into the correct directory:
 
 ```bash
-wget -O ~/.gaia/config/genesis.json https://raw.githubusercontent.com/cosmos/mainnet/master/genesis.json
+wget -O ~/.flora/config/genesis.json https://github.com/flora-labs/networks/raw/main/flora-devnet-1/genesis.json
 ```
 
 ##### 7. Start the Node
@@ -79,7 +79,7 @@ wget -O ~/.gaia/config/genesis.json https://raw.githubusercontent.com/cosmos/mai
 Begin syncing the blockchain:
 
 ```bash
-gaiad start
+florad start
 ```
 
 This command starts the node, which will begin to sync with the Cosmos network. You can monitor the logs to check the progress.

@@ -29,22 +29,23 @@ Cosmovisor is a process manager for Cosmos SDK applications that simplifies the 
 
 ## Service File Template
 
-A service file template helps in automating the node's operations using `systemd`, a system and service manager in Unix-like operating systems.
+A service helps in automating the node's operations using `systemd`, a system and service manager in Unix-like operating systems.
 
+Service file location `/etc/systemd/system/flora.service`
 ```bash
 [Unit]
-Description=Chain Node Name
+Description=Flora Node
 After=network-online.target
 
 [Service]
-User=<USER>
-Group=<GROUP>
+User=flora
+Group=flora
 ExecStart=/usr/local/bin/cosmovisor run start
 Restart=always
 RestartSec=3
 LimitNOFILE=4096
-Environment="DAEMON_NAME=<NODE_BINARY_NAME>"
-Environment="DAEMON_HOME=<NODE_HOME_FOLDER>"
+Environment="DAEMON_NAME=florad"
+Environment="DAEMON_HOME=/home/flora/.flora"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="DAEMON_LOG_BUFFER_SIZE=512"
@@ -66,11 +67,15 @@ These commands control and monitor the node service:
   ```bash
   systemctl daemon-reload
   ```
+- **Enable the service**: Sets service autostart after system reboot.
+  ```bash
+  systemctl enable flora
+  ```  
 - **Start the service**: Activates the node service.
   ```bash
-  systemctl start <service>
+  systemctl start flora
   ```
 - **Monitor logs**: Tracks the running service's output in real time.
   ```bash
-  journalctl -u <service> -f
+  journalctl -u flora -f
   ```
