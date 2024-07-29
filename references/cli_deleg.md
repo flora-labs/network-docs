@@ -2,7 +2,9 @@
 
 ## Delegate Tokens
 ```bash
-florad tx staking delegate <VALIDATOR_OPERATOR_ADDRESS> <AMOUNT>uflora --from <KEY_NAME> --chain-id <CHAIN_ID>
+florad tx staking delegate <VALIDATOR_OPERATOR_ADDRESS> <AMOUNT>uflora \
+  --from <KEY_NAME> \
+  --chain-id <CHAIN_ID>
 ```
 - `<VALIDATOR_OPERATOR_ADDRESS>`: Address of the validator to delegate to.
 - `<AMOUNT>`: Amount of tokens to delegate in microflora (`uflora`).
@@ -11,7 +13,9 @@ florad tx staking delegate <VALIDATOR_OPERATOR_ADDRESS> <AMOUNT>uflora --from <K
 
 ## Undelegate Tokens
 ```bash
-florad tx staking undelegate <VALIDATOR_OPERATOR_ADDRESS> <AMOUNT>uflora --from <KEY_NAME> --chain-id <CHAIN_ID>
+florad tx staking undelegate <VALIDATOR_OPERATOR_ADDRESS> <AMOUNT>uflora \
+  --from <KEY_NAME> \
+  --chain-id <CHAIN_ID>
 ```
 - `<VALIDATOR_OPERATOR_ADDRESS>`: Address of the validator from which you are undelegating.
 - `<AMOUNT>`: Amount of tokens to undelegate in microflora (`uflora`).
@@ -19,7 +23,9 @@ florad tx staking undelegate <VALIDATOR_OPERATOR_ADDRESS> <AMOUNT>uflora --from 
 
 ## Redelegate Tokens
 ```bash
-florad tx staking redelegate <SRC_VALIDATOR_OPERATOR_ADDRESS> <DST_VALIDATOR_OPERATOR_ADDRESS> <AMOUNT>uflora --from <KEY_NAME> --chain-id <CHAIN_ID>
+florad tx staking redelegate <SRC_VALIDATOR_OPERATOR_ADDRESS> <DST_VALIDATOR_OPERATOR_ADDRESS> <AMOUNT>uflora \
+  --from <KEY_NAME> \
+  --chain-id <CHAIN_ID>
 ```
 - `<SRC_VALIDATOR_OPERATOR_ADDRESS>`: Source validator address.
 - `<DST_VALIDATOR_OPERATOR_ADDRESS>`: Destination validator address.
